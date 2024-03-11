@@ -1,8 +1,7 @@
 eureka:
   client:
-    register-with-eureka: true
-    fetch-registry: true
-
+    register-with-eureka: false
+    fetch-registry: false
 
 logging:
   level:
@@ -12,3 +11,7 @@ logging:
           netflix:
             eureka: INFO
             discovery: INFO
+
+service:
+ name:  ${spring.application.name}
+ description: ${spring.application.description}

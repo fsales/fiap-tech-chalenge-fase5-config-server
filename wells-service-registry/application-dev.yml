@@ -7,3 +7,6 @@ logging:
           netflix:
             eureka: DEBUG
             discovery: DEBUG
+service:
+ name:  ${spring.application.name} - dev
+ description: ${spring.application.description}
