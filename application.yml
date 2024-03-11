@@ -1,8 +1,4 @@
 spring:
-  application:
-    name: @project.name@
-    description: @project.version@
-    version: @project.description@
   profiles:
     active: ${PROFILE_ENVIRONMENT:default}
     include: actuator
