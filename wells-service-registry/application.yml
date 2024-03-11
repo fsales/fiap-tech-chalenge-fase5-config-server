@@ -1,0 +1,14 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          netflix:
+            eureka: INFO
+            discovery: INFO
