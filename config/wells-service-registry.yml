@@ -1,0 +1,9 @@
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          netflix:
+            eureka: DEBUG
+            discovery: DEBUG
