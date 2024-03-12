@@ -1,0 +1,22 @@
+#https://medium.com/@yohanesdwikiwitman/spring-boot-3-template-part-8-spring-actuator-07a5f9affe17
+spring:
+  config:
+    activate:
+      on-profile: actuator
+
+management:
+  endpoints:
+    gateway:
+      enabled: true
+    livenessState:
+      enabled: true
+    readinessState:
+      enabled: true
+    web:
+      exposure:
+        include: health,info,env,metrics, loggers,gateway,livenessState,readinessState
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: always
