@@ -1,0 +1,37 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
+  instance:
+    prefer-ip-address: true
+
+server:
+  port: 8125
+
+spring:
+  cloud:
+    config:
+      uri:  http://localhost:8888/
+      name: ${spring.application.name}
+    discovery:
+      enabled: true
+  profiles:
+    include:
+      - gateway
+      - actuator
+
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: DEBUG
+          netflix:
+            eureka: DEBUG
+            discovery: DEBUG
+service:
+ name:  ${spring.application.name}
+ description: ${spring.application.description}

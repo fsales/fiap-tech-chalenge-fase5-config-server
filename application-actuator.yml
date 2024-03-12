@@ -8,7 +8,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: health,info,env,metrics, loggers
   endpoint:
     health:
       show-details: always
